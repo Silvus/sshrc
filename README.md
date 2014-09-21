@@ -58,3 +58,9 @@ If you use tmux frequently, you can make sshrc work there as well.
 After the SHELL variable is set, any new tmux server will load your configurations. The -S option will start a separate tmux server at /tmp/russelltmuxserver. Don't try to access the vanilla tmux server when your SHELL environment variable is set: if the server isn't already running, other users will get your configurations with their own sessions.
 
 [sshrc-git]: https://aur.archlinux.org/packages/sshrc-git
+
+### Autocomplete
+
+To keep the ssh autocomplete feature, you can add the following line to your ~/.bashrc.
+    
+    complete -F _known_hosts sshrc
